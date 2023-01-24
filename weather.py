@@ -5,7 +5,7 @@ import time
 def getWeather(canvas):
     lat = textfield1.get()
     lon = textfield2.get()
-    api = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=1967522e244a31341440abeb65cd82c8"
+    api = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid="
     json_data = requests.get(api).json()
     place = json_data['name']
     condition = json_data['weather'][0]['main']
